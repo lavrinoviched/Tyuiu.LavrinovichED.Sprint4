@@ -4,7 +4,7 @@ namespace Tyuiu.LavrinovichED.Sprint4.Task0.V3
 {
     internal class Program
     {
-        static void Main(string[] args, int[] array)
+        static void Main(string[] args)
         {
             DataService ds = new DataService();
 
@@ -30,21 +30,18 @@ namespace Tyuiu.LavrinovichED.Sprint4.Task0.V3
 
             for (int i = 0; i < array.Length; i++)
             {
-                Console.WriteLine(array[i]);
+                Console.Write(array[i]);
             }
+            Console.WriteLine();
+
 
             Console.WriteLine("****************************************************************************************************");
             Console.WriteLine("* РЕЗУЛЬТАТ:                                                                                       *");
             Console.WriteLine("****************************************************************************************************");
-            Console.WriteLine(" Произведение нечетных элементов массива");
 
-            array = ds.GetMultOddArrEl(array);
+            int res = ds.GetMultOddArrEl(array);
+            Console.WriteLine(" Произведение нечетных элементов массива:" + res);
 
-            for (int i = 0; i < array.Length; i++)
-            {
-                Console.WriteLine(array[i] + "\t");
-            }
-            Console.WriteLine();
             Console.ReadKey(); 
         }
     }
