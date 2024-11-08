@@ -15,7 +15,7 @@ namespace Tyuiu.LavrinovichED.Sprint4.Task5.V15.Lib
             {
                 for (int j = 0; j < colums; j++)
                 {
-                    if (matrix[i, j] % 2 == 0)
+                    if (matrix[i, j] > 0)
                     {
                         c += matrix[i, j];
                     }
